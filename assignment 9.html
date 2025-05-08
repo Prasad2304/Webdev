@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 9</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #dab685 0%, #fcb69f 100%);
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    h4 {
+      margin-left: 20px;
+      color: #444;
+    }
+
+    form {
+      background: #ffffff;
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    label {
+      font-weight: bold;
+      color: #333;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px 15px;
+      margin-bottom: 20px;
+      border: 2px solid #ffa07a;
+      border-radius: 8px;
+      font-size: 15px;
+      background-color: #fff8f0;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #140d0a;
+      outline: none;
+    }
+
+    button {
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #b71a1a, hsl(20, 60%, 1%));
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Assignment 9</h1>
+  <h2>Q. Create an Employee Registration Form</h2>
+  <h4>Name: Prasad Patil</h4>
+  <h4>Roll No: 102</h4>
+
+  <form action="/submit-registration" method="post">
+    <label for="Fname">First Name:</label>
+    <input type="text" id="Fname" name="firstname" required>
+
+    <label for="Lname">Last Name:</label>
+    <input type="text" id="Lname" name="lastname" required>
+
+    <label for="gender">Gender:</label>
+    <select name="gender" id="gender" required>
+      <option value="">Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phoneno" pattern="[0-9]{10}" placeholder="1234567890" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="DOB" required>
+
+    <button type="submit">Register Employee</button>
+  </form>
+</body>
+</html>
